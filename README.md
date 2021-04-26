@@ -1,27 +1,34 @@
 # MuseGenerator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+##Overview
 
-## Development server
+As humans, we are innately creative. So often, however, the yearning to make something new is tamped down by the fear of getting stuck, or even worse, getting started. The process can be jumpstarted, and creative blocks can be circumnavigated by introducing just a little outside inspiration.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To encourage jumping in- a concept for the project must be declared to get started. However, this is fully editable and can change as the idea changes. Random generation of numbers, colors, words, and phrases encourage lateral thinking. The user can create a collection of these pieces of inspiration to start shaping their idea for a project and edit and change the collection as their project evolves. Additional notes fields can be added to a project to prompt actions from included templates, or as an empty field to take your own notes.
 
-## Code scaffolding
+##Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+User Login: Users will be able to create and authenticate an account and login to create/save/view their lists and notes
 
-## Build
+Create projects: Can have multiple collections saved under user account
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Randomizer: User can generate one or more of the following fields: number, color(hex code), word, phrase, instruction (“verb the noun”syntax)
 
-## Running unit tests
+Save, Delete: Once generated, each item can be added to a list and saved under the user’s account or deleted from list
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Notes: Can add spaces for additional notes about project, instructions to self, or use a few included prompt templates
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+##Technologies
 
-## Further help
+<ul>
+  <li>Javascript</li>
+  <li>Angular</li>
+  <li>APIs</li> 
+  <li>HTML5</li>
+  <li>CSS</li>
+  <li>Node.js</li>
+  <li>MySQL</li>
+<ul>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+

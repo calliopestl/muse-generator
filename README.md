@@ -1,6 +1,6 @@
 # MuseGenerator
 
-##Overview
+###Overview
 
 As humans, we are innately creative. So often, however, the yearning to make something new is tamped down by the fear of getting stuck, or even worse, getting started. The process can be jumpstarted, and creative blocks can be circumnavigated by introducing just a little outside inspiration.
 

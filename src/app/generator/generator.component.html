@@ -1,17 +1,17 @@
-<form>
+<form method="post" name="generator">
     <fieldset>
       <legend>Generate Random Elements:</legend>
       <div class="generator-choices" id="choice1">
-        <input type="checkbox" id="number" name="generate-random" value="number">
-        <label for="number">Random Number</label>
+        <input type="checkbox" id="genRdmNumber" name="genRdmNumber" (onsubmit)="getRandomNumber()">
+        <label for="genRdmNumber">Random Number: </label>{{getRandomNumber()}}
       </div>
       <div class="generator-choices" id="choice2">
-        <input type="checkbox" id="color" name="generate-random" value="color">
-        <label for="color">Random Color</label>
+        <input type="checkbox" id="genRdmColor" name="genRdmColor" (onsubmit)="getRandomColor()">
+        <label for="genRdmColor">Random Color: </label> {{getRandomColor()}}
       </div>
       <div class="generator-choices" id="choice3">
-        <input type="checkbox" id="word" name="generate-random" value="word">
-        <label for="word">Random Word</label>
+        <input type="checkbox" id="genRdmWord" name="genRdmWord" (onsubmit)="getRandomWord()">
+        <label for="genRdmWord">Random Word: </label> {{getRandomWord()}}
       </div>
       <div class="generator-choices" id="choice4">
         <input type="checkbox" id="phrase" name="generate-random" value="phrase">

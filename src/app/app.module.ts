@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { GeneratorComponent } from './generator/generator.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

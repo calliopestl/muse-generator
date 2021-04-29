@@ -1,29 +1,29 @@
 <form method="post" name="generator">
     <fieldset>
       <legend>Generate Random Elements:</legend>
-      <div class="generator-choices" id="choice1">
-        <input type="checkbox" id="genRdmNumber" name="genRdmNumber" (onsubmit)="getRandomNumber()">
-        <label for="genRdmNumber">Random Number: </label>{{getRandomNumber()}}
+      <div class="form-check generator-choices" id="choice1">
+        <input type="checkbox" class="form-check-input" id="genRdmNumber" (onsubmit)="getRandomNumber()">
+        <label class="form-check-label" for="genRdmNumber">Random Number: </label>{{getRandomNumber()}}
       </div>
-      <div class="generator-choices" id="choice2">
-        <input type="checkbox" id="genRdmColor" name="genRdmColor" (onsubmit)="getRandomColor()">
-        <label for="genRdmColor">Random Color: </label> {{getRandomColor()}}
+      <div class="form-check generator-choices" id="choice2">
+        <input type="checkbox" id="genRdmColor" class="form-check-input" (onsubmit)="getRandomColor()">
+        <label class="form-check-label" for="genRdmColor">Random Color: </label> {{getRandomColor()}}
       </div>
-      <div class="generator-choices" id="choice3">
-        <input type="checkbox" id="genRdmWord" name="genRdmWord" (onsubmit)="getRandomWord()">
-        <label for="genRdmWord">Random Word: </label> {{getRandomWord()}}
+      <div class="form-check generator-choices" id="choice3">
+        <input type="checkbox" id="genRdmWord" class="form-check-input" (onsubmit)="getRandomWord()">
+        <label class="form-check-label" for="genRdmWord">Random Word: </label> {{getRandomWord()}}
       </div>
-      <div class="generator-choices" id="choice4">
-        <input type="checkbox" id="phrase" name="generate-random" value="phrase">
-        <label for="phrase">Random Phrase</label>
+      <div class="form-check generator-choices" id="choice4">
+        <input type="checkbox" id="genRdmPhrase" class="form-check-input">
+        <label class="form-check-label" for="genRdmPhrase">Random Phrase</label>
       </div>
-      <div class="generator-choices" id="choice5">
-        <input type="checkbox" id="instruction" name="generate-random" value="instruction">
-        <label for="instruction">Random Instruction</label>
+      <div class="form-check generator-choices" id="choice5">
+        <input type="checkbox" id="genRdmInstruction" class="form-check-input">
+        <label class="form-check-label" for="genRdmInstruction">Random Instruction</label>
       </div>
-      <div id="generator-submit">
-        <input type="submit" value="Generate">
-      </div>
+      
+      <button type="submit" class="btn btn-primary">Generate</button>
+     
   
     </fieldset>
   </form>

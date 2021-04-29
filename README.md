@@ -28,7 +28,7 @@ Notes: Can add spaces for additional notes about project, instructions to self, 
   <li>HTML5</li>
   <li>CSS</li>
   <li>Node.js</li>
-  <li>MySQL</li>
+  <li>MongoDB</li>
 <ul>
 
 

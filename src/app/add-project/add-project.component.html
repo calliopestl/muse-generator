@@ -1,0 +1,30 @@
+<div>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input
+                type="text"
+                class="form-control"
+                id="title"
+                required
+                [(ngModel)] = "project.title"
+                name="title" />
+            </div>
+            <div class="form-group">
+                <label for="generated">GENERATOR GOES HERE</label>
+                <input
+                class="form-control"
+                id="generated"
+                required
+                [(ngModel)]="project.generated"
+                name="generated" />
+            </div>
+            <button (click)="saveProject()" class="btn btn-success">Submit</button>
+        </div>
+        <div *ngIf="submitted">
+            <h4>Project submitted successfully!</h4>
+            <button class="btn btn-success" (click)="newProject()">Add</button>
+        </div>
+    </div>
+    </div>

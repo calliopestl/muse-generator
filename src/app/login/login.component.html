@@ -1,14 +1,40 @@
-<h2>To save to a project</h2>
-<button class="register" href="/register">Register</button>or Login
-<form>
-  <div class="container">
-    <label for="username">Username</label>
-    <input type="text" placeholder="Enter Email" name="username" required><br>
-    <label for="password">Password</label>
-    <input type="password" placeholder="Enter Password" name="password" required><br>
-    <button type="submit">Login</button><br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember">Remember me
-    </label>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login </title>
+    <link rel="stylesheet" href="C:\Users\halle\OneDrive\Desktop\liftoff\liftoff-angular-project\liftoff_project\muse-generator\src\styles.css">
+ </head>
+<body>
+
+<form action="/login" method="post" class="form-login">
+  <div class="title">
+    <h2><a href="/register" class="button">Register</a> or Login</h2>
   </div>
-</form>
+  <div class="field">
+    <label>Username:</label>
+    <input type="text" name="username" placeholder="Please enter your email" />
+    <br />
+  </div>
+  <div class="field">
+      <label>Password:</label>
+      <input type="password" name="password" placeholder="Please enter your password "required />
+  </div> 
+  <div class="field">
+    <input class="submit-btn btn" type="submit" value="Login" required />
+  </div>
+  <label id="error-message"></label>
+ </form>
+
+ <script>
+   const urlParams = new URLSearchParams(window.location.search);
+   const info = urlParams.get('info');
+
+   if(info) {
+     const errorMessage = document.getElementById("error-message");
+     errorMessage.innerText = info;
+     errorMessage.style.display = "block";
+
+   }
+ </script>
+</body>
+</html>

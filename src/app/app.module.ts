@@ -16,12 +16,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardUserComponent } from './board-user/board-user.component';
 
-const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  {path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'register', component: RegisterComponent },
-];
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+
+
+
 
 @NgModule({
   declarations: [
@@ -35,17 +37,19 @@ const routes: Routes = [
     DashboardComponent,
     AddProjectComponent,
     ProjectDetailsComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardUserComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,82 @@
-<p>register works!</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register </title>
+    <link rel="stylesheet" href="C:\Users\halle\OneDrive\Desktop\liftoff\liftoff-angular-project\liftoff_project\muse-generator\src\styles.css">
+ </head>
+<body>
+
+  <form
+  *ngIf="!isSuccessful"
+  name="form"
+  (ngSubmit)="f.form.valid && onSubmit()"
+  #f="ngForm"
+  novalidate
+>
+
+  <div class="title">
+    <h2>Register for an Account</h2>
+  </div>
+  <div class="form-group">
+    <label for="username">Username: </label>
+    <input type="text" class="form-control" name="username" [(ngModel)]="form.username" placeholder="Please enter a username" required minlength="3" maxlength="20" #username="ngModel" />
+    <div class="alert-danger" *ngIf="username.errors && f.submitted">
+      <div *ngIf="username.errors.required">Username is required</div>
+      <div *ngIf="username.errors.minlength"> Username must be at least 3 characters</div>
+      <div *ngIf="username.errors.maxlength"> Username cannot be more than 20 characters</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email: </label>
+    <input type="email" class="form-control" name="email" [(ngModel)]="form.email" placeholder="Please enter your email" required email #email="ngModel" />
+    <div class="alert-danger" *ngIf="email.errors && f.submitted">
+      <div *ngIf="email.errors.required">Email is required</div>
+      <div *ngIf="email.errors.email"> Please enter a valid email address</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password: </label>
+    <input type="password" class="form-control" name="password" [(ngModel)]="form.password" placeholder="Please enter your password" required minlength="6" #password="ngModel" />
+    <div class="alert-danger" *ngIf="password.errors && f.submitted">
+      <div *ngIf="password.errors.required">Password is required</div>
+      <div *ngIf="password.errors.minlength"> Password must be at least 6 characters</div>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label for="verifyPassword">Verify Password</label>
+    <input type="password" class="form-control" name="verifyPassword" [(ngModel)]="form.verifyPassword" placeholder="Please type password again" required>
+      <div>Please re-enter password</div>
+
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary btn-block">Register</button>
+  </div>
+
+  <div class="alert alert-warning" *ngIf="f.submitted && isRegisterFailed">
+    Registration Failed!<br> {{ errorMessage }}
+  </div>
+  </form>
+
+  <div class="alert alert-success" *ngIf="isSuccessful">
+    Your have successfully registered for an account!
+  </div>
+
+
+
+
+ <script>
+   function validatePassword() {
+       let password = document.getElementById("password").value;
+       let verifyPassword = document.getElementById("verifyPassword").value;
+       if (password != verifyPassword) {
+           alert("Passwords do not match.");
+           return false;
+       } else {
+            return true;
+       }
+   }
+  
+
+ </script>
+</body>
+</html>

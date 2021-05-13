@@ -1,5 +1,5 @@
 .btn {
-  background: #ea06b3;
+  background: #e625a6;
   color: #fff;
   padding: 10px;
   font-size:1.5em;
@@ -7,17 +7,63 @@
   
 }
 
+.spacer {
+  height: 50px;
+}
+
+.btn:hover {
+  background: #ffb61c;
+}
+
+h1, 
+h2,
+h3,
+h4,
+form,
+p,
+label {
+  color: #fff;
+  font-family: monospace;
+}
+
+.navbar.navbar-expand {
+  background: #1207a1;
+  font-family: monospace;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: #ffb61c;
+}
+
 .form-title {
   font-size: 2em;
 }
 
-.form-choices {
+.form-check-label {
   padding: 20px 0;
   font-size: 1.5em;
 }
 
+.form-check-input {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  vertical-align: middle;
+  
+}
+
 .form-check.generator-choices {
   padding: 5px;
+  
+}
+
+.generatedResult {
+  padding: 10px;
+  font-size: 2em;
+  border: 2px solid #fff;
+  margin: 10px;
+  
 }
 body {
   display: flex;

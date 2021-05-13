@@ -20,6 +20,16 @@
                 [(ngModel)]="project.generated"
                 name="generated" />
             </div>
+            <div class="form group">
+                <label for="notes">Notes: </label>
+                <input
+                type="text"
+                class="form-control"
+                id="notes"
+                [(ngModel)]="project.notes"
+                name="notes" />
+                
+            </div>
             <button (click)="saveProject()" class="btn btn-success">Submit</button>
         </div>
         <div *ngIf="submitted">

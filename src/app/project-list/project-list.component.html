@@ -46,7 +46,7 @@
                 {{ currentProject.notes }}
             </div>
 
-            <a class="badge badge-warning" routerLink="/projects/{{ currentProject.id }}">Edit</a>
+            <a class="badge badge-warning" [routerLink]="['/projects', currentProject.id]">Edit</a>
 
         </div>
         <div *ngIf="!currentProject">

@@ -21,7 +21,8 @@ h3,
 h4,
 form,
 p,
-label {
+label,
+#text {
   color: #fff;
   font-family: monospace;
 }
